@@ -15,7 +15,7 @@
 
     <main>
         <!-- Left Content -->
-        <section class="main_content">
+        <section class="main-content">
             <!-- Main Article -->
             <article>
                 <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
@@ -26,8 +26,8 @@
                 <form>
                     <div>
                         <div class="input-title">Jenis Kelamin</div>
-                        <input type="radio" id="selection-man"><label for="selection-man">Laki-Laki</label>
-                        <input type="radio" id="selection-woman"><label for="selection-woman">Perempuan</label>
+                        <input type="radio" id="selection-man" name="gender" value="man"><label for="selection-man">Laki-Laki</label>
+                        <input type="radio" id="selection-woman" name="gender" value="woman"><label for="selection-woman">Perempuan</label>
                     </div>
                     <div>
                         <label for="input-berat-badan">Berat Badan (kg)</label>
@@ -42,12 +42,12 @@
                         <input type="number" id="input-tinggi-badan">
                     </div>
                     <div>
-                        <button class="button submit">Submit BMI</button>
-                        <button class="button reset">Reset</button>
+                        <button class="button submit" type="button">Submit BMI</button>
+                        <button class="button reset" type="button">Reset</button>
                     </div>
-                    
                 </form>
             </section>
+
         </section>
 
             <!-- Form Article -->
@@ -57,7 +57,10 @@
                 </header>
 
                 <article>
-                    <p>isi penjelasan</p>
+                    <p>1. Menghitung berat badan <br>
+                        2. Menentukan kategori berat badan ideal atau tidak <br>
+                        3. Mempersiapkan program penurunan berat badan
+                    </p>
                 </article>
             </sction>
 
@@ -70,22 +73,72 @@
                     </header>
 
                     <!-- Result Section -->
-                    <section class="result-section">
-                        <p>Hasil result adalah:</p>
-
-                        <h2>24,7</h2>
-
-                        <p>Anda memiliki berat badan</p>
+                    <section id="result" class="result-section" style="display:none;">
+                        <h3>Berat Badan Lebih</h3>
+                        <h2 id="bmiValue"></h2>
+                        <p id="bmiCategory"></p>
+                        <div>
+                            <button type="submit" class="button submit">Download Hasil BMI</button>
+                        </div>
                     </section>
 
                     <!-- Result Article -->
-                    <article></article>
+                    <article id="resultArticle2" class="result-article" style="display:none;">
+                        <p>Hasil BMI kurang dari 18.5 </p>
+                        <p>Anda berada dalam kategori Kekurangan Berat Badan. <br>Orang yang kekurangan berat badan mungkin tidak mendapatkan cukup nutrisi penting seperti vitamin, mineral, dan protein. Ini bisa menyebabkan berbagai masalah kesehatan.<br>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menaikkan berat badan hingga batas normal.</p>
+                        <p>
+                            BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+                        </p>
+                    </article>
 
                     <!-- General Information -->
-                    <section></section>
+                    <section id="generalInformation2" class="general-information" style="display:none;">
+                        <h3>Penyebab Kekurangan Berat Badan</h3>
+                        <p>Metabolisme Tinggi</p>
+                        <p>Penyakit Kronis</p>
+                        <p>Masalah Pencernaan</p>
+                        <p>Pola Makan Tidak Seimbang</p>
+                    </section>
+
+                    <!-- Result Article -->
+                    <article id="resultArticle1" class="result-article" style="display:none;" >
+                        <p>Hasil BMI diantara 18.5 sampai 24.99 </p>
+                        <p>Anda berada dalam kategori Normal (ideal). <br>Rentang ini menunjukkan bahwa berat badan Anda seimbang dengan tinggi badan Anda. Ini dianggap sebagai berat badan yang sehat.<br>Orang dengan BMI dalam rentang ini umumnya memiliki risiko yang lebih rendah terhadap masalah kesehatan terkait berat badan, seperti penyakit jantung, diabetes tipe 2, dan tekanan darah tinggi</p>
+                        <p>
+                            BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+                        </p>
+                    </article>
+
+                    <!-- General Information -->
+                    <section id="generalInformation1" class="general-information" style="display:none;">
+                            <h3>Tips Gaya Hidup Sehat</h3>
+                            <p>Nutrisi</p>
+                            <p>Aktivitas Fisik</p>
+                            <p>Pola Tidur</p>
+                    </section>
+
+                    <!-- Result Article -->
+                    <article id="resultArticle" class="result-article" style="display:none;" >
+                        <p>Hasil BMI diantara 25 sampai 30 atau lebih </p>
+                        <p>Anda berada dalam kategori Kelebihan berat badan atau Kegemukan (Obesitas). <br>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikosumsi dan berolahraga.<br>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menunrunkan berat badan hingga batas normal.</p>
+                        <p>
+                            BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+                        </p>
+                    </article>
+
+                    <!-- General Information -->
+                    <section id="generalInformation" class="general-information" style="display:none;">
+                            <h3>Beberapa Penyakit  yang berasal dari kegemukan</h3>
+                            <p>Diabetes</p>
+                            <p>Hipertensi</p>
+                            <p>Sakit Jantung</p>
+                            <p>Osteoarthritis</p>
+                    </section>
+
                 </article>
             </section>
     </main>
     
+    <script src="js/scripts.js"></script>
 </body>
 </html>
