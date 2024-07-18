@@ -1,1 +1,21 @@
-/* ini css
+/* ini css*/
+
+.main-title {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-content {
+    border: 1px solid;
+    flex: 1;
+    padding: 12px;
+}
+
+.input-title {
+    font-size: 1px solid;
+    font-weight: bold;
+}
